@@ -44,8 +44,14 @@ names(words)
 words_gr = words[, .N, by=word]
 
 table(words_gr$N)
+ggplot(words_gr, aes(N)) + 
+  geom_histogram(col="black", fill="green", bins=104) + 
+  scale_x_sqrt(breaks=c(1,2,3,4,5,7,10,20,30,40,50,70,100)) +
+  scale_y_sqrt(breaks=c(10,100,1000,3000,5000,10000,20000,30000))
+
 words_gr[N==5]$word
 length(words_gr[N>10]$word)
+
 
 write.table(words_gr, file = "words_count.csv", sep = ",", na = "", 
             row.names = F, col.names = T)

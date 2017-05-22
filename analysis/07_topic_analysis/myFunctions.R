@@ -11,8 +11,56 @@ load_from_db = function(mydb, table_name)
   df = fetch(rs, n=-1)
   dbClearResult(rs)
   dt = as.data.table(df)
+  
+  if (colnames(dt)[1] == "row_names")
+    dt = dt[, -c("row_names"), with=F]
+  
   return(dt)
 }
+
+
+print_reviewSummary = function(review)
+{
+  writeLines( paste("reviews:", nrow(review)) )
+  writeLines( paste("authors:", length(unique(review$author_id))) )
+  writeLines( paste("comments:", length(unique(review$comments))) )
+  
+  writeLines( "Number of words per review:" )
+  print(summary(review$nwords))
+  
+  by_author = review[, .N, by=author_id]
+  writeLines( "Number of reviews per authors:" )
+  print(summary(by_author$N))
+  
+  writeLines( "Reviews per year:" )
+  print(table(review$year))
+}
+
+
+# All the pairs <author, year> are associated with the corresponding <numWords, numReviews>.
+# All the pairs which do not satisfy the input condition are removed
+remove_long_tail_authors = function(review, minWords, minReviews)
+{
+  # 
+  # info grouped by author
+  # 
+  
+  author = review[, .(totWords=sum(nwords), reviews=length(id)), by=list(author_id, year)]
+  author_active = author[totWords>minWords & reviews>minReviews]
+  
+  
+  # 
+  # reviews only for guests which are active
+  # 
+  
+  setkey(author_active, author_id, year)
+  setkey(review, author_id, year)
+  
+  review <- review[author_active, nomatch=0]
+  return(review)
+}
+
+
 
 pre_proces_review = function(review)
 {
@@ -24,14 +72,11 @@ pre_proces_review = function(review)
   return(review)
 }
 
-post_proces_review = function(review, plot_language=F)
+
+english_review = function(review, plot_language=F)
 {
-  review$inferredLanguage = textcat(review$comments)
-  review$nwords = sapply(gregexpr("\\W+", review$comments), length) + 1
-  review$nchars = nchar(review$comments)
-  
   if (plot_language)
-  print( ggplot(review, aes(inferredLanguage)) + geom_bar() + facet_grid(year ~ .) )
+    print( ggplot(review, aes(inferredLanguage)) + geom_bar() + facet_grid(year ~ .) )
    
   reviewEng = review[!is.na(year) & inferredLanguage=='english']
   writeLines("Ratio of reviews in English:")

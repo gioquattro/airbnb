@@ -15,7 +15,7 @@ review = load_from_db(mydb, "review")
 review$inferredLanguage = textcat(review$comments)
 review = review[, c("idReview", "inferredLanguage"), with=F]
 
-dbWriteTable(mydb, value=review, name="review_language", append=F) 
+dbWriteTable(mydb, value=review, name="review_language", append=F, row.names=F, col.names=T) 
 detach(package:RMySQL)
 
 print(Sys.time() - t0)

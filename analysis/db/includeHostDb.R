@@ -10,6 +10,6 @@ mydb = dbConnect(MySQL(), user='root', password='', dbname='airbnb', host='127.0
 dbListTables(mydb)
 
 host = read.csv("Dump 180517/hostInfo2.txt", sep = "/")
-dbWriteTable(mydb, value=host, name="host", append=F) 
+dbWriteTable(mydb, value=host, name="host", append=F, row.names=F, col.names=T) 
 detach(package:RMySQL)
 

@@ -56,12 +56,29 @@ print_reviewSummary(review)
 
 
 # 
-# reviews only in English written by active authors
+# reviews only in English
 # 
 
-review = review[nwords>50]
-print_reviewSummary(review)
 review = english_review(review)
+print_reviewSummary(review)
+
+
+# 
+# length of reviews (too short reviews may not give statistical significant results)
+# 
+
+ggplot(review, aes(x=factor(year), y=nwords)) + 
+  geom_violin(alpha=0.5, fill=3) +
+  geom_boxplot(width=.1, fill=7, outlier.size=NA) +
+  scale_y_log10(breaks=c(1,5,10,50,100,500,1000,5000)) 
+
+ggplot(review, aes(x=factor(year), y=nwords)) + 
+  geom_jitter(alpha=0.01, size=.1, width=.3) +
+  geom_violin(alpha=0.5, fill=3) +
+  geom_boxplot(width=.1, fill=7, outlier.size=NA) +
+  ylim(0,200)
+
+review = review[nwords>10]
 print_reviewSummary(review)
 
 
@@ -163,6 +180,7 @@ printSocialHomeWords = function(doc_term_processed, alpha, selected_year=NA)
     ggplot(doc_term_processed, aes(x=social_vs_home, y=nwords)) + 
       geom_point(alpha=alpha) +
       geom_smooth(method = "lm") +
+      geom_smooth(col=2) +
       scale_x_log10() + 
       scale_y_log10() +
       annotate("text", label=paste("cor =", stat), x = 1, y = 1000, size = 4, colour = "red") +
@@ -202,6 +220,7 @@ printPosNegWords = function(doc_term_processed, alpha, selected_year=NA)
     ggplot(doc_term_processed, aes(x=pos_vs_neg, y=nwords)) + 
       geom_point(alpha=alpha) +
       geom_smooth(method = "lm") +
+      geom_smooth(col=2) +
       scale_x_log10() + 
       scale_y_log10() +
       annotate("text", label=paste("cor =", stat), x = 1, y = 1000, size = 4, colour = "red") +
@@ -226,12 +245,12 @@ printPosNegWords(doc_term_processed, alpha=0.01, selected_year=2017)
 # distributions
 # 
 
-ggplot(doc_term_processed, aes(social_vs_home)) + geom_histogram() + scale_x_log10()
-ggplot(doc_term_processed, aes(pos_vs_neg)) + geom_histogram() + scale_x_log10() + scale_y_sqrt()
+ggplot(doc_term_processed, aes(social_vs_home)) + geom_histogram(col=1, fill=3, bins=100) + scale_x_log10()
+ggplot(doc_term_processed, aes(pos_vs_neg)) + geom_histogram(col=1, fill=3, bins=100) + scale_x_log10() + scale_y_sqrt()
 
 
 # 
-# visualise scatterplot
+# visualise social vs emotion
 # 
 
 printSocialHomePosNeg = function(doc_term_processed, alpha, selected_year=NA)
@@ -253,9 +272,10 @@ printSocialHomePosNeg = function(doc_term_processed, alpha, selected_year=NA)
       ggplot(doc_term_processed, aes(x=pos_vs_neg, y=social_vs_home)) + 
         geom_point(alpha=alpha) +
         geom_smooth(method = "lm") +
-        scale_x_sqrt(breaks=c(0,1,2,3,5,10), limits=c(0,10)) + 
-        scale_y_sqrt(breaks=c(0,1,2,3,5,10,15,20), limits=c(0,20)) +
-        annotate("text", label=paste("cor =", stat), x = 0.1, y = 20, size = 4, colour = "red") +
+        geom_smooth(col=2) +
+        scale_x_log10() + 
+        scale_y_log10() +
+        annotate("text", label=paste("cor =", stat), x = 1, y = 1000, size = 4, colour = "red") +
         ggtitle(selected_year)
     )
 }
@@ -275,20 +295,26 @@ printSocialHomePosNeg(doc_term_processed, alpha=0.01, selected_year=2017)
 # visualise evolution over time
 # 
 
-doc_term_melt = melt(doc_term_processed, 
-                     id.vars = c("year"),
-                     measure.vars = c("social_vs_home", "pos_vs_neg"))
+ggplot(doc_term_processed, aes(x=factor(year), y=social_vs_home)) + 
+  geom_jitter(alpha=0.01, size=.05, width=.3) +
+  geom_violin(alpha=0.7, fill=3) +
+  geom_boxplot(width=.1, fill=7, outlier.size=NA) +
+  scale_y_log10()
+
+ggplot(doc_term_processed, aes(x=factor(year), y=pos_vs_neg)) + 
+  geom_jitter(alpha=0.01, size=.05, width=.3) +
+  geom_violin(alpha=0.7, fill=3) +
+  geom_boxplot(width=.1, fill=7, outlier.size=NA) +
+  scale_y_log10()
 
 
-ggplot(doc_term_melt, aes(x=variable, y=value)) +
-  geom_violin() +
-  geom_boxplot(fill=7, width=.1, outlier.size=NA) +
-  facet_grid(.~year) +
-  scale_y_log10() +
-  theme(axis.text.x = element_text(angle = 90, hjust=1, vjust=0.5))
-
-# doc_term_gr = doc_term_melt[, .(value=mean(value)), by=list(year, variable)]
-# ggplot(doc_term_gr, aes(x=variable, y=value)) + 
-#   geom_bar(stat="identity", col=1) +
-#   facet_grid(year ~ .) +
+# doc_term_melt = melt(doc_term_processed, 
+#                      id.vars = c("year"),
+#                      measure.vars = c("social_vs_home", "pos_vs_neg"))
+# 
+# 
+# ggplot(doc_term_melt, aes(x=variable, y=value)) +
+#   geom_violin() +
+#   geom_boxplot(fill=7, width=.1, outlier.size=NA) +
+#   facet_grid(.~year) +
 #   theme(axis.text.x = element_text(angle = 90, hjust=1, vjust=0.5))

@@ -133,9 +133,44 @@ summary(doc_term2[,c('social', 'home',
 
 
 # 
-# adding locale for authors
+# Extracting dump of reviews extremely pos-neg social-house
 # 
 
+# house comments
+setorder(doc_term2, social_vs_home)
+doc_term2$social_vs_home[1:300]
+doc_term2$comments[1:300]
+
+# social comments
+setorder(doc_term2, -social_vs_home)
+doc_term2$social_vs_home[1:300]
+doc_term2$comments[1:300]
+
+# neg comments
+setorder(doc_term2, pos_vs_neg)
+doc_term2$pos_vs_neg[1:300]
+doc_term2$comments[1:300]
+
+# pos comments
+setorder(doc_term2, -pos_vs_neg)
+doc_term2$pos_vs_neg[1:300]
+doc_term2$comments[1:300]
+
+# eandom comments
+set.seed(4)
+doc_term2$rnd = rnorm( nrow(doc_term2) )
+setorder(doc_term2, rnd)
+doc_term2$pos_vs_neg[1:300]
+doc_term2$social_vs_home[1:300]
+doc_term2$comments[1:300]
+doc_term2 = doc_term2[, -c("rnd"), with=F]
+
+
+
+
+# 
+# adding locale for authors
+# 
 
 # most common locales
 locales = doc_term2[, .(cnt=length(comments)), by=locale]
@@ -165,6 +200,17 @@ doc_term3$country_guest = str_replace_all(doc_term3$country_guest, '"', '')
 doc_term3$country_listing = str_replace_all(doc_term3$country_listing, '"', '')
 
 cultural = fread("world_cultural_factors.csv")
+names(cultural)
+# [1] "country"                   "selected_for"              "power_distance"            "individualism"            
+# [5] "masculinity"               "uncertainty_avoidance"     "long_term"                 "size_sq_km"               
+# [9] "population_est_2013"       "mobile_subscriber_million" "internet_users_million"    "GDP_per_capita_in_dollars"
+# [13] "world_value_survey"        "overall_pace_means"       
+
+ggplot(cultural, aes(x=power_distance, y=GDP_per_capita_in_dollars)) + geom_smooth() + geom_point()
+ggplot(cultural, aes(x=individualism, y=GDP_per_capita_in_dollars)) + geom_smooth() + geom_point()
+ggplot(cultural, aes(x=overall_pace_means, y=GDP_per_capita_in_dollars)) + geom_smooth() + geom_point()
+
+
 
 
 # 
@@ -204,13 +250,30 @@ countries_listing$country_listing[1:20]
 doc_term3[country_guest=="USA"] <- "United States"
 doc_term3[country_guest=="UK"] <- "United Kingdom"
 
+nrow(doc_term3[is.na(country_guest)])/nrow(doc_term3)
+# [1] 0.3897496
+# 
+# This the ratio of null in coutry_guest
+
+nrow(doc_term3[is.na(country_listing)])/nrow(doc_term3)
+# [1] 0.2285485
+# 
+# This the ratio of null in coutry_listing
+
+
+
+
+
+
 
 # 
-# joining GDP
+# joining GDP and individualism
 # 
 
 doc_term4 = as.data.table(
-  sqldf("select t1.*, t2.GDP_per_capita_in_dollars GDP_guest, t3.GDP_per_capita_in_dollars GDP_listing
+  sqldf("select t1.*, 
+                t2.GDP_per_capita_in_dollars GDP_guest, t3.GDP_per_capita_in_dollars GDP_listing,
+                t2.individualism individualism_guest, t3.individualism individualism_listing
          from doc_term3 t1
          left join cultural t2 on t1.country_guest=t2.country
          left join cultural t3 on t1.country_listing=t3.country")
@@ -218,315 +281,108 @@ doc_term4 = as.data.table(
 
 
 doc_term4$GDP_delta = doc_term4$GDP_listing - doc_term4$GDP_guest
-# 
-doc_term4$GDP_guest_br = cut(doc_term4$GDP_guest, breaks=10)
-doc_term4$GDP_listing_br = cut(doc_term4$GDP_listing, breaks=10)
-doc_term4$GDP_delta_br = cut(doc_term4$GDP_delta, breaks=10)
-
-names(doc_term4)
-# [1] "author_id"        "listing_id"       "year"             "comments"         "locale"           "inferredLanguage"
-# [7] "nwords"           "social"           "home"             "posemo"           "negemo"           "social_vs_home"  
-# [13] "pos_vs_neg"       "country_guest"    "city_listing"     "country_listing"  "GDP_guest"        "GDP_listing"     
-# [19] "GDP_delta"        "GDP_guest_br"     "GDP_listing_br"   "GDP_delta_br"   
-
-ggplot( doc_term4, aes(x=GDP_guest_br, y=social_vs_home) ) +
-  geom_boxplot(outlier.shape=NA) +
-  geom_point(size=.5, alpha=.01) 
-  
-ggplot( doc_term4, aes(x=GDP_guest_br, y=pos_vs_neg) ) +
-  geom_boxplot(outlier.shape=NA) +
-  geom_point(size=.5, alpha=.01) 
-
-
-ggplot( doc_term4, aes(x=GDP_listing_br, y=social_vs_home) ) +
-  geom_boxplot(outlier.shape=NA) +
-  geom_point(size=.5, alpha=.01) 
-
-ggplot( doc_term4, aes(x=GDP_listing_br, y=pos_vs_neg) ) +
-  geom_boxplot(outlier.shape=NA) +
-  geom_point(size=.5, alpha=.01) 
-
-
-ggplot( doc_term4, aes(x=GDP_delta_br, y=social_vs_home) ) +
-  geom_boxplot(outlier.shape=NA) +
-  geom_point(size=.5, alpha=.01) 
-
-ggplot( doc_term4, aes(x=GDP_delta_br, y=pos_vs_neg) ) +
-  geom_boxplot(outlier.shape=NA) +
-  geom_point(size=.5, alpha=.01) 
-
+doc_term4$individualism_delta = doc_term4$individualism_listing - doc_term4$individualism_guest
 
 
 
 # 
-# grouping by quartiles
+# computing breaks
 # 
 
-doc_termLS = doc_term4[social_vs_home<1.1]
-doc_termHS = doc_term4[social_vs_home>2.33]
-doc_termLP = doc_term4[pos_vs_neg<2]
-doc_termHP = doc_term4[pos_vs_neg>3.33]
+library(dplyr)
 
-summary( doc_termLS[, c('GDP_guest', 'GDP_listing', 'GDP_delta'), with=F] )
-#  GDP_guest      GDP_listing      GDP_delta     
-# Min.   : 3500   Min.   : 3500   Min.   :-58600  
-# 1st Qu.:30500   1st Qu.:30500   1st Qu.: -7225  
-# Median :37300   Median :39400   Median :     0  
-# Mean   :35225   Mean   :37357   Mean   : -1119  
-# 3rd Qu.:41000   3rd Qu.:47200   3rd Qu.:  6800  
-# Max.   :62100   Max.   :62100   Max.   : 58600  
-# NA's   :13139   NA's   :11261   NA's   :17612   
-
-summary( doc_termHS[, c('GDP_guest', 'GDP_listing', 'GDP_delta'), with=F] )
-#  GDP_guest      GDP_listing      GDP_delta       
-# Min.   : 3500   Min.   : 3500   Min.   :-58600.0  
-# 1st Qu.:30000   1st Qu.:30500   1st Qu.: -6300.0  
-# Median :35700   Median :39400   Median :     0.0  
-# Mean   :33801   Mean   :36664   Mean   :   599.8  
-# 3rd Qu.:39400   3rd Qu.:47200   3rd Qu.:  8900.0  
-# Max.   :62100   Max.   :62100   Max.   : 58600.0  
-# NA's   :14022   NA's   :12447   NA's   :18892     
-
-summary( doc_termLP[, c('GDP_guest', 'GDP_listing', 'GDP_delta'), with=F] )
-#  GDP_guest      GDP_listing      GDP_delta       
-# Min.   : 3500   Min.   : 3500   Min.   :-58600.0  
-# 1st Qu.:30500   1st Qu.:30500   1st Qu.: -6100.0  
-# Median :35700   Median :39400   Median :     0.0  
-# Mean   :34412   Mean   :37493   Mean   :   271.8  
-# 3rd Qu.:40300   3rd Qu.:47200   3rd Qu.:  7800.0  
-# Max.   :62100   Max.   :62100   Max.   : 58600.0  
-# NA's   :16920   NA's   :14940   NA's   :22938     
-
-summary( doc_termHP[, c('GDP_guest', 'GDP_listing', 'GDP_delta'), with=F] )
-#  GDP_guest      GDP_listing      GDP_delta     
-# Min.   : 3500   Min.   : 3500   Min.   :-58600  
-# 1st Qu.:30500   1st Qu.:30500   1st Qu.: -7900  
-# Median :37300   Median :39100   Median :     0  
-# Mean   :34747   Mean   :35861   Mean   : -1133  
-# 3rd Qu.:40300   3rd Qu.:47200   3rd Qu.:  7800  
-# Max.   :62100   Max.   :62100   Max.   : 58600  
-# NA's   :8296    NA's   :7831    NA's   :11545   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-guest_LS = guest[id %in% review_g_LS$author_id]
-guest_HS = guest[id %in% review_g_HS$author_id]
-guest_LP = guest[id %in% review_g_LP$author_id]
-guest_HP = guest[id %in% review_g_HP$author_id]
-
-guest_HS$location[1:50]
-
-listing$city[1:50]
-
-
-# 
-# sanity check
-# 
-
-table(doc_term_processed$inferredLanguage)
-# english 
-# 43259
-
-testSHH = doc_term_processed[social_vs_home>10]
-testSHL = doc_term_processed[social_vs_home<.5]
-testPNH = doc_term_processed[pos_vs_neg>7]
-testPNL = doc_term_processed[pos_vs_neg<.5]
-
-testSHH$comments[1:20]
-testSHL$comments[1:20]
-testPNH$comments[1:20]
-testPNL$comments[1:20]
-
-
-
-# 
-# shorter reviews for homes and negative emotions?
-# 
-
-printSocialHomeWords = function(doc_term_processed, alpha, selected_year=NA)
+ntile_na <- function(x,n)
 {
-  if (is.na(selected_year)) {
-    selected_year="All years"
-  } else {
-    doc_term_processed = doc_term_processed[year==selected_year]
-  }
-  
-  mycor = cor.test(doc_term_processed$social_vs_home, doc_term_processed$nwords)
-  nstars = ifelse(mycor$p.value<0.001, "***",
-                  ifelse(mycor$p.value<0.01, "**",
-                         ifelse(mycor$p.value<0.05, "*",
-                                ifelse(mycor$p.value<0.1, ".", ""))))
-  stat = paste(round(mycor$estimate,2), nstars)
-  
-  print(
-    ggplot(doc_term_processed, aes(x=social_vs_home, y=nwords)) + 
-      geom_point(alpha=alpha) +
-      geom_smooth(method = "lm") +
-      geom_smooth(col=2) +
-      scale_x_log10() + 
-      scale_y_log10() +
-      annotate("text", label=paste("cor =", stat), x = 1, y = 1000, size = 4, colour = "red") +
-      ggtitle(selected_year)
-  )
+  notna <- !is.na(x)
+  out <- rep(NA_real_,length(x))
+  out[notna] <- ntile(x[notna],n)
+  return(out)
 }
 
+doc_term4$GDP_guest_br = factor( ntile_na(doc_term4$GDP_guest, 6) ) 
+doc_term4$GDP_listing_br = factor( ntile_na(doc_term4$GDP_listing, 6) )
+doc_term4$GDP_delta_br = factor( ntile_na(doc_term4$GDP_delta, 6) )
 
-printSocialHomeWords(doc_term_processed, alpha=0.01)
-printSocialHomeWords(doc_term_processed, alpha=0.2, selected_year=2010)
-printSocialHomeWords(doc_term_processed, alpha=0.2, selected_year=2011)
-printSocialHomeWords(doc_term_processed, alpha=0.1, selected_year=2012)
-printSocialHomeWords(doc_term_processed, alpha=0.1, selected_year=2013)
-printSocialHomeWords(doc_term_processed, alpha=0.05, selected_year=2014)
-printSocialHomeWords(doc_term_processed, alpha=0.05, selected_year=2015)
-printSocialHomeWords(doc_term_processed, alpha=0.02, selected_year=2016)
-printSocialHomeWords(doc_term_processed, alpha=0.01, selected_year=2017)
+doc_term4$individualism_guest_br = factor( ntile_na(doc_term4$individualism_guest, 6) )
+doc_term4$individualism_listing_br = factor( ntile_na(doc_term4$individualism_listing, 6) )
+doc_term4$individualism_delta_br = factor( ntile_na(doc_term4$individualism_delta, 6) )
 
 
-
-printPosNegWords = function(doc_term_processed, alpha, selected_year=NA)
-{
-  if (is.na(selected_year)) {
-    selected_year="All years"
-  } else {
-    doc_term_processed = doc_term_processed[year==selected_year]
-  }
-  
-  mycor = cor.test(doc_term_processed$pos_vs_neg, doc_term_processed$nwords)
-  nstars = ifelse(mycor$p.value<0.001, "***",
-                  ifelse(mycor$p.value<0.01, "**",
-                         ifelse(mycor$p.value<0.05, "*",
-                                ifelse(mycor$p.value<0.1, ".", ""))))
-  stat = paste(round(mycor$estimate,2), nstars)
-  
-  print(
-    ggplot(doc_term_processed, aes(x=pos_vs_neg, y=nwords)) + 
-      geom_point(alpha=alpha) +
-      geom_smooth(method = "lm") +
-      geom_smooth(col=2) +
-      scale_x_log10() + 
-      scale_y_log10() +
-      annotate("text", label=paste("cor =", stat), x = 1, y = 1000, size = 4, colour = "red") +
-      ggtitle(selected_year)
-  )
-}
-
-
-printPosNegWords(doc_term_processed, alpha=0.01)
-printPosNegWords(doc_term_processed, alpha=0.2, selected_year=2010)
-printPosNegWords(doc_term_processed, alpha=0.2, selected_year=2011)
-printPosNegWords(doc_term_processed, alpha=0.1, selected_year=2012)
-printPosNegWords(doc_term_processed, alpha=0.1, selected_year=2013)
-printPosNegWords(doc_term_processed, alpha=0.05, selected_year=2014)
-printPosNegWords(doc_term_processed, alpha=0.05, selected_year=2015)
-printPosNegWords(doc_term_processed, alpha=0.02, selected_year=2016)
-printPosNegWords(doc_term_processed, alpha=0.01, selected_year=2017)
 
 
 
 # 
-# distributions
+# plotting
 # 
 
-ggplot(doc_term_processed, aes(social_vs_home)) + geom_histogram(col=1, fill=3, bins=100) + scale_x_log10()
-ggplot(doc_term_processed, aes(pos_vs_neg)) + geom_histogram(col=1, fill=3, bins=100) + scale_x_log10() + scale_y_sqrt()
+ggplot( na.omit(doc_term4), aes(x=GDP_guest_br, y=social_vs_home) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
+
+ggplot( na.omit(doc_term4), aes(x=GDP_guest_br, y=pos_vs_neg) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
 
 
-# 
-# visualise social vs emotion
-# 
+ggplot( na.omit(doc_term4), aes(x=GDP_listing_br, y=social_vs_home) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
 
-printSocialHomePosNeg = function(doc_term_processed, alpha, selected_year=NA)
-{
-  if (is.na(selected_year)) {
-    selected_year="All years"
-  } else {
-    doc_term_processed = doc_term_processed[year==selected_year]
-  }
-  
-  mycor = cor.test(doc_term_processed$social_vs_home, doc_term_processed$pos_vs_neg)
-  nstars = ifelse(mycor$p.value<0.001, "***",
-                  ifelse(mycor$p.value<0.01, "**",
-                         ifelse(mycor$p.value<0.05, "*",
-                                ifelse(mycor$p.value<0.1, ".", ""))))
-  stat = paste(round(mycor$estimate,2), nstars)
+ggplot( na.omit(doc_term4), aes(x=GDP_listing_br, y=pos_vs_neg) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
 
-    print(
-      ggplot(doc_term_processed, aes(x=pos_vs_neg, y=social_vs_home)) + 
-        geom_point(alpha=alpha) +
-        geom_smooth(method = "lm") +
-        geom_smooth(col=2) +
-        scale_x_log10() + 
-        scale_y_log10() +
-        annotate("text", label=paste("cor =", stat), x = 1, y = 1000, size = 4, colour = "red") +
-        ggtitle(selected_year)
-    )
-}
 
-printSocialHomePosNeg(doc_term_processed, alpha=0.01)
-printSocialHomePosNeg(doc_term_processed, alpha=0.2, selected_year=2010)
-printSocialHomePosNeg(doc_term_processed, alpha=0.2, selected_year=2011)
-printSocialHomePosNeg(doc_term_processed, alpha=0.1, selected_year=2012)
-printSocialHomePosNeg(doc_term_processed, alpha=0.1, selected_year=2013)
-printSocialHomePosNeg(doc_term_processed, alpha=0.05, selected_year=2014)
-printSocialHomePosNeg(doc_term_processed, alpha=0.05, selected_year=2015)
-printSocialHomePosNeg(doc_term_processed, alpha=0.02, selected_year=2016)
-printSocialHomePosNeg(doc_term_processed, alpha=0.01, selected_year=2017)
+ggplot( na.omit(doc_term4), aes(x=GDP_delta_br, y=social_vs_home) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
+
+ggplot( na.omit(doc_term4), aes(x=GDP_delta_br, y=pos_vs_neg) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
+
+
 
 
 # 
-# visualise evolution over time
-# 
 
-ggplot(doc_term_processed, aes(x=factor(year), y=social_vs_home)) + 
-  geom_jitter(alpha=0.01, size=.05, width=.3) +
-  geom_violin(alpha=0.7, fill=3) +
-  geom_boxplot(width=.1, fill=7, outlier.size=NA) +
-  scale_y_log10()
+ggplot( na.omit(doc_term4), aes(x=individualism_guest_br, y=social_vs_home) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
 
-ggplot(doc_term_processed, aes(x=factor(year), y=pos_vs_neg)) + 
-  geom_jitter(alpha=0.01, size=.05, width=.3) +
-  geom_violin(alpha=0.7, fill=3) +
-  geom_boxplot(width=.1, fill=7, outlier.size=NA) +
-  scale_y_log10()
+ggplot( na.omit(doc_term4), aes(x=individualism_guest_br, y=pos_vs_neg) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
 
 
-# doc_term_melt = melt(doc_term_processed, 
-#                      id.vars = c("year"),
-#                      measure.vars = c("social_vs_home", "pos_vs_neg"))
-# 
-# 
-# ggplot(doc_term_melt, aes(x=variable, y=value)) +
-#   geom_violin() +
-#   geom_boxplot(fill=7, width=.1, outlier.size=NA) +
-#   facet_grid(.~year) +
-#   theme(axis.text.x = element_text(angle = 90, hjust=1, vjust=0.5))
+ggplot( na.omit(doc_term4), aes(x=individualism_listing_br, y=social_vs_home) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
+
+ggplot( na.omit(doc_term4), aes(x=individualism_listing_br, y=pos_vs_neg) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
+
+
+ggplot( na.omit(doc_term4), aes(x=individualism_delta_br, y=social_vs_home) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
+
+ggplot( na.omit(doc_term4), aes(x=individualism_delta_br, y=pos_vs_neg) ) +
+  geom_jitter(size=.5, alpha=.025, col=4, width=.15, height=0) +
+  geom_violin(alpha=0) +
+  geom_boxplot(outlier.shape=NA, alpha=1, width=.1, fill=3)
+
+
+

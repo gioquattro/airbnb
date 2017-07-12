@@ -1,0 +1,828 @@
+city;long_desc;country
+ Destin, Florida ; Destin, FL 32541, USA ; USA
+ Bruxelles, Belgio ; Brussels, Belgium ; Belgium
+ Parigi, Francia ; Paris, France ; France
+ Rambouillet, Francia ; 78120 Rambouillet, France ; France
+ Italy, New York ; Italy, NY 14512, USA ; USA
+ Singapore ; Singapore ; Singapore
+ New York, New York ; 3790 S Las Vegas Blvd, Las Vegas, NV 89109, USA ; USA
+ Mosca, Russia ; Moscow, Russia ; Russia
+ Nantes, Francia ; Nantes, France ; France
+ St Louis, Missouri ; St. Louis, MO, USA ; USA
+ Skˆvde, Svezia ; Sk√∂vde, Sweden ; Sweden
+ NA ; Namibia ; Namibia
+ Hong-Kong ; Hong Kong ; Hong Kong
+ Nizza, Francia ; Nice, France ; France
+ Los Angeles, California ; Los Angeles, CA, USA ; USA
+ Seattle, Washington ; Seattle, WA, USA ; USA
+ Barcellona, Spagna ; Barcelona, Spain ; Spain
+ Amburgo, Germania ; Hamburg, Germany ; Germany
+ Charlottetown, Canada ; Charlottetown, PE, Canada ; Canada
+ Waldbrunn, Germania ; 69429 Waldbrunn, Germany ; Germany
+ Washington, District of Columbia ; Washington, DC, USA ; USA
+ Zurigo, Svizzera ; Z√ºrich, Switzerland ; Switzerland
+ Chicago, Illinois ; Chicago, IL, USA ; USA
+ Honolulu, Hawaii ; Honolulu, HI, USA ; USA
+ Londra, Regno Unito ; London, UK ; UK
+ Ekaterinburg, Russia ; Yekaterinburg, Sverdlovsk Oblast, Russia ; Russia
+ Reno, Nevada ; Reno, NV, USA ; USA
+ Courbevoie, Francia ; 92400 Courbevoie, France ; France
+ San Francisco, California ; San Francisco, CA, USA ; USA
+ Amsterdam, Paesi Bassi ; Amsterdam, Netherlands ; Netherlands
+ Ottawa, Canada ; Ottawa, ON, Canada ; Canada
+ Laguna Hills, California ; Laguna Hills, CA, USA ; USA
+ Kensington, California ; Kensington, CA, USA ; USA
+ Lione, Francia ; Lyon, France ; France
+ Bordeaux, Francia ; Bordeaux, France ; France
+ Newcastle, Australia ; Newcastle NSW, Australia ; Australia
+ Roma, Italia ; Rome, Italy ; Italy
+ Ridgewood, New Jersey ; Ridgewood, NJ, USA ; USA
+ Belo Horizonte, Brasile ; Belo Horizonte - State of Minas Gerais, Brazil ; Brazil
+ Media, Pennsylvania ; Media, PA 19063, USA ; USA
+ San Pietroburgo, Russia ; St Petersburg, Russia ; Russia
+ Newport Beach, California ; Newport Beach, CA, USA ; USA
+ Graz, Austria ; Graz, Austria ; Austria
+ Bozeman, Montana ; Bozeman, MT, USA ; USA
+ Birmingham, Regno Unito ; Birmingham, UK ; UK
+ Losanna, Svizzera ; Lausanne, Switzerland ; Switzerland
+ Colonia, Germania ; Cologne, Germany ; Germany
+ Zagabria, Croazia ; Zagreb, Croatia ; Croatia
+ Sheffield, Regno Unito ; Sheffield, UK ; UK
+ Kaarst, Germania ; 41564 Kaarst, Germany ; Germany
+ Copenaghen, ; Copenhagen, Denmark ; Denmark
+ Rueil-Malmaison, Francia ; 92500 Rueil-Malmaison, France ; France
+ Tasmania, Australia ; Tasmania, Australia ; Australia
+ Melbourne, Australia ; Melbourne VIC, Australia ; Australia
+ Toronto, Canada ; Toronto, ON, Canada ; Canada
+ Mont-de-Marsan, Francia ; 40000 Mont-de-Marsan, France ; France
+ Oberdreis, Germania ; 57639 Oberdreis, Germany ; Germany
+ Vancouver, Canada ; Vancouver, BC, Canada ; Canada
+ Detroit, Michigan ; Detroit, MI, USA ; USA
+ Haarlem, Paesi Bassi ; Haarlem, Netherlands ; Netherlands
+ Dortmund, Germania ; Dortmund, Germany ; Germany
+ Mougins, Francia ; 06250 Mougins, France ; France
+ Sydney, Australia ; Sydney NSW, Australia ; Australia
+ Berlino, Germania ; Berlin, Germany ; Germany
+ Berkeley, California ; Berkeley, CA, USA ; USA
+ Montpellier, Francia ; Montpellier, France ; France
+ Collingwood, Canada ; Collingwood, ON, Canada ; Canada
+ Edmonton, Canada ; Edmonton, AB, Canada ; Canada
+ Creswell, Oregon ; Creswell, OR 97426, USA ; USA
+ Aix-en-Provence, Francia ; Aix-en-Provence, France ; France
+ Oakland, California ; Oakland, CA, USA ; USA
+ Bath, Canada ; Odessa, ON K0H, Canada ; Canada
+ Galway, Irlanda ; Galway, Ireland ; Ireland
+ Verona, Italia ; Verona, VR, Italy ; Italy
+ Adelaide, Australia ; Adelaide SA, Australia ; Australia
+ Tunisi, Tunisia ; Tunis, Tunisia ; Tunisia
+ Allen, Texas ; Allen, TX, USA ; USA
+ Boston, Massachusetts ; Boston, MA, USA ; USA
+ Cambridge, Massachusetts ; Cambridge, MA, USA ; USA
+ Lahaina, Hawaii ; Lahaina, HI, USA ; USA
+ Shenyang, Cina ; Shenyang, Liaoning, China ; China
+ Wallagoot, Australia ; Wallagoot NSW 2550, Australia ; Australia
+ Wiesbaden, Germania ; Wiesbaden, Germany ; Germany
+ Sudbury, Canada ; Sudbury, ON, Canada ; Canada
+ Stanford, California ; Stanford, CA, USA ; USA
+ Cincinnati, Ohio ; Cincinnati, OH, USA ; USA
+ Charlotte, North Carolina ; Charlotte, NC, USA ; USA
+ Milano, Italia ; Milan, Italy ; Italy
+ Dublin, California ; Dublin, CA 94568, USA ; USA
+ San Diego, California ; San Diego, CA, USA ; USA
+ Montreal, Canada ; Montreal, QC, Canada ; Canada
+ Poggibonsi, Italia ; 53036 Poggibonsi, Province of Siena, Italy ; Italy
+ Catalogna, Spagna ; Catalonia, Spain ; Spain
+ New York, Stati Uniti ; New York, NY, USA ; USA
+ Doha, Qatar ; Doha, Qatar ; Qatar
+ Tel Aviv, Israele ; Tel Aviv-Yafo, Israel ; Israel
+ San Paolo, Brasile ; S√£o Paulo, State of S√£o Paulo, Brazil ; Brazil
+ Torino, Italia ; Turin, Metropolitan City of Turin, Italy ; Italy
+ Leeds, Regno Unito ; Leeds, UK ; UK
+ Taiwan ; Taiwan ; Taiwan
+ Vitoria, Spagna ; Vitoria-Gasteiz, √Ålava, Spain ; Spain
+ Newport News, Virginia ; Newport News, VA, USA ; USA
+ Kiev, Ucraina ; Kiev, Ukraine ; Ukraine
+ Ferndale, Michigan ; Ferndale, MI 48220, USA ; USA
+ Tokyo, Giappone ; Tokyo, Japan ; Japan
+ West Jordan, Utah ; West Jordan, UT, USA ; USA
+ Rombas, Francia ; Rombas, France ; France
+ San Antonio, Texas ; San Antonio, TX, USA ; USA
+ Houston, Texas ; Houston, TX, USA ; USA
+ Francoforte, Germania ; Frankfurt, Germany ; Germany
+ Rotterdam, Paesi Bassi ; Rotterdam, Netherlands ; Netherlands
+ Marsiglia, Francia ; Marseille, France ; France
+ Santa Barbara, California ; Santa Barbara, CA, USA ; USA
+ Edimburgo, Regno Unito ; Edinburgh, UK ; UK
+ Arrecife, Spagna ; Arrecife, Las Palmas, Spain ; Spain
+ Carlton, Australia ; Carlton VIC 3053, Australia ; Australia
+ Brisbane, Australia ; Brisbane QLD, Australia ; Australia
+ Brighton, Regno Unito ; Brighton, UK ; UK
+ Framingham, Massachusetts ; Framingham, MA, USA ; USA
+ Troyes, Francia ; Troyes, France ; France
+ Massachusetts, Stati Uniti ; Massachusetts, USA ; USA
+ Montclair, New Jersey ; Montclair, NJ, USA ; USA
+ Israele ; Israel ; Israel
+ Richmond, Canada ; Richmond, BC, Canada ; Canada
+ Herne, Germania ; Herne, Germany ; Germany
+ Trent, Italia ; Trento, Italy ; Italy
+ Florida, Stati Uniti ; Florida, USA ; USA
+ Varsavia, Polonia ; Warsaw, Poland ; Poland
+ Calgary, Canada ; Calgary, AB, Canada ; Canada
+ Bogot‡, Colombia ; Bogot√°, Bogota, Colombia ; Colombia
+ Wellington, Nuova Zelanda ; Wellington, New Zealand ; New Zealand
+ Honduras ; Honduras ; Honduras
+ Munster, Germania ; M√ºnster, Germany ; Germany
+ Bologna, Italia ; Bologna, Italy ; Italy
+ Podgorica, Montenegro ; Podgorica, Montenegro ; Montenegro
+ Tolosa, Francia ; Toulouse, France ; France
+ Ithaca, New York ; Ithaca, NY, USA ; USA
+ Madrid, Spagna ; Madrid, Spain ; Spain
+ Atlanta, Georgia ; Atlanta, GA, USA ; USA
+ Lisburn, Regno Unito ; Lisburn, UK ; UK
+ Vienna, Austria ; Vienna, Austria ; Austria
+ Ghent, Belgio ; Ghent, Belgium ; Belgium
+ Manchester, Regno Unito ; Manchester, UK ; UK
+ Sunnyvale, California ; Sunnyvale, CA, USA ; USA
+ Firenze, Italia ; Florence, Italy ; Italy
+ Fair Oaks, California ; Fair Oaks, CA, USA ; USA
+ Salerno, Italia ; Salerno, Province of Salerno, Italy ; Italy
+ Winterthur, Svizzera ; Winterthur, Switzerland ; Switzerland
+ Minsk, Bielorussia ; Minsk, Belarus ; Belarus
+ New Orleans, Louisiana ; New Orleans, LA, USA ; USA
+ Phoenix, Arizona ; Phoenix, AZ, USA ; USA
+ Mumbai, India ; Mumbai, Maharashtra, India ; India
+ Asheville, North Carolina ; Asheville, NC, USA ; USA
+ Palo Alto, California ; Palo Alto, CA, USA ; USA
+ Falmouth, Massachusetts ; Falmouth, MA, USA ; USA
+ Akron, Ohio ; Akron, OH, USA ; USA
+ Moscow, Idaho ; Moscow, ID, USA ; USA
+ Thirroul, Australia ; Thirroul NSW 2515, Australia ; Australia
+ Pittsburgh, Pennsylvania ; Pittsburgh, PA, USA ; USA
+ Flagstaff, Arizona ; Flagstaff, AZ, USA ; USA
+ Lismore, Australia ; Lismore NSW 2480, Australia ; Australia
+ Pijnacker, Paesi Bassi ; Pijnacker, Netherlands ; Netherlands
+ Isola di Bowen, Canada ; Bowen Island, BC, Canada ; Canada
+ Inverness, Regno Unito ; Inverness, UK ; UK
+ Stati Uniti ; United States ; United States
+ Monaco, Germania ; Munich, Germany ; Germany
+ San Jose, California ; San Jose, CA, USA ; USA
+ Le Cannet, Francia ; 06110 Le Cannet, France ; France
+ Minneapolis, Minnesota ; Minneapolis, MN, USA ; USA
+ Miami, Florida ; Miami, FL, USA ; USA
+ Venezia, Florida ; Venice, FL, USA ; USA
+ Perugia, Italia ; Perugia, Italy ; Italy
+ Catonsville, Maryland ; Catonsville, MD, USA ; USA
+ Sarasota, Florida ; Sarasota, FL, USA ; USA
+ Groninga, Paesi Bassi ; Groningen, Netherlands ; Netherlands
+ Portland, Oregon ; Portland, OR, USA ; USA
+ Boise, Idaho ; Boise, ID, USA ; USA
+ Lisbona, Portogallo ; Lisbon, Portugal ; Portugal
+ Hannover, Germania ; Hanover, Germany ; Germany
+ BrasÌlia, Brasile ; Brasilia - Federal District, Brazil ; Brazil
+ Plantersville, Mississippi ; Plantersville, MS, USA ; USA
+ Fiumicino, Italia ; 00054 Fiumicino, Metropolitan City of Rome, Italy ; Italy
+ Kyoto, Giappone ; Kyoto, Kyoto Prefecture, Japan ; Japan
+ Lucerna, Svizzera ; Lucerne, Switzerland ; Switzerland
+ Dublino, Irlanda ; Dublin, Ireland ; Ireland
+ Anchorage, Alaska ; Anchorage, AK, USA ; USA
+ Oslo, Norvegia ; Oslo, Norway ; Norway
+ Utrecht, Paesi Bassi ; Utrecht, Netherlands ; Netherlands
+ Boulogne-Billancourt, Francia ; Boulogne-Billancourt, France ; France
+ Philadelphia, Pennsylvania ; Philadelphia, PA, USA ; USA
+ Ensenada, Messico ; Ensenada, Baja California, Mexico ; Mexico
+ Madison, Wisconsin ; Madison, WI, USA ; USA
+ Kailua, Hawaii ; Kailua, HI, USA ; USA
+ Long Ditton, Regno Unito ; Long Ditton, UK ; UK
+ Commack, New York ; Commack, NY, USA ; USA
+ Izmir, Turchia ; Izmir, ƒ∞zmir, Turkey ; Turkey
+ Osasco, Brasile ; Osasco - State of S√£o Paulo, Brazil ; Brazil
+ Kaunas, Lituania ; Kaunas, Lithuania ; Lithuania
+ Auckland, Nuova Zelanda ; Auckland, New Zealand ; New Zealand
+ Washington, Missouri ; Washington, MO, USA ; USA
+ Utica, New York ; Utica, NY, USA ; USA
+ North Carolina, Stati Uniti ; North Carolina, USA ; USA
+ Queensland, Australia ; Queensland, Australia ; Australia
+ Falmouth, Regno Unito ; Falmouth, UK ; UK
+ Rheinfelden, Svizzera ; Rheinfelden, Switzerland ; Switzerland
+ Derby, Regno Unito ; Derby, UK ; UK
+ Milwaukie, Oregon ; Milwaukie, OR, USA ; USA
+ Ramat Hasharon, Israele ; Ramat Hasharon, Israel ; Israel
+ Limoges, Francia ; Limoges, France ; France
+ Northampton, Massachusetts ; Northampton, MA, USA ; USA
+ Mousseaux-sur-Seine, Francia ; 78270 Mousseaux-sur-Seine, France ; France
+ Neuilly-sur-Seine, Francia ; Neuilly-sur-Seine, France ; France
+ Wake Forest, North Carolina ; Wake Forest, NC 27587, USA ; USA
+ Lilla, Francia ; Lille, France ; France
+ Inghilterra, Regno Unito ; England, UK ; UK
+ Mannheim, Germania ; Mannheim, Germany ; Germany
+ Chapel Hill, North Carolina ; Chapel Hill, NC, USA ; USA
+ Pisa, Italia ; Pisa, Province of Pisa, Italy ; Italy
+ Neuchatel, Svizzera ; Neuch√¢tel, Switzerland ; Switzerland
+ Dhaka, Bangladesh ; Dhaka, Bangladesh ; Bangladesh
+ LeganÈs, Spagna ; Legan√©s, Madrid, Spain ; Spain
+ Culver City, California ; Culver City, CA, USA ; USA
+ Belgrado, Serbia ; Belgrade, Serbia ; Serbia
+ Hamden, Connecticut ; Hamden, CT, USA ; USA
+ Kent, Ohio ; Kent, OH, USA ; USA
+ Montevideo, Uruguay ; Montevideo, Montevideo Department, Uruguay ; Uruguay
+ Francia ; France ; France
+ Richmond, California ; Richmond, CA, USA ; USA
+ Haverhill, Massachusetts ; Haverhill, MA, USA ; USA
+ East Perth, Australia ; East Perth WA 6004, Australia ; Australia
+ Nevada City, California ; Nevada City, CA 95959, USA ; USA
+ Lombardia, Italia ; Lombardy, Italy ; Italy
+ Oregon, Stati Uniti ; Oregon, USA ; USA
+ Citt‡ del Messico, Messico ; Mexico City, CDMX, Mexico ; Mexico
+ Bainbridge Island, Washington ; Bainbridge Island, WA, USA ; USA
+ Pozna, Polonia ; Pozna≈Ñ, Poland ; Poland
+ GÈmenos, Francia ; G√©menos, France ; France
+ Richland, Washington ; Richland, WA, USA ; USA
+ Lilburn, Georgia ; Lilburn, GA 30047, USA ; USA
+ Somerville, Massachusetts ; Somerville, MA, USA ; USA
+ Randburg, Sudafrica ; Randburg, South Africa ; South Africa
+ Greenland, New Hampshire ; Greenland, NH, USA ; USA
+ Kuala Lumpur, Malesia ; Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia ; Malaysia
+ Villedieu-les-PoÍles, Francia ; 50800 Villedieu-les-Po√™les, France ; France
+ Manzanita, Oregon ; Manzanita, OR, USA ; USA
+ Svezia ; Sweden ; Sweden
+ Victoria, Australia ; Victoria, Australia ; Australia
+ Whitehorse, Canada ; Whitehorse, YT, Canada ; Canada
+ Offenbach, Germania ; Offenbach, Germany ; Germany
+ Voronezh, Russia ; Voronezh, Voronezh Oblast, Russia ; Russia
+ Leghorn, Italia ; Livorno, Province of Livorno, Italy ; Italy
+ Malaga, Spagna ; M√°laga, Spain ; Spain
+ West Vancouver, Canada ; West Vancouver, BC, Canada ; Canada
+ Glasgow, Regno Unito ; Glasgow, UK ; UK
+ L'Aia, Paesi Bassi ; The Hague, Netherlands ; Netherlands
+ Makati, Filippine ; Makati, Metro Manila, Philippines ; Philippines
+ Como, Italia ; 22100 Como, Province of Como, Italy ; Italy
+ Takoma Park, Maryland ; Takoma Park, MD, USA ; USA
+ Elmira, New York ; Elmira, NY, USA ; USA
+ Istanbul, Turchia ; Istanbul, ƒ∞stanbul, Turkey ; Turkey
+ Union, New Jersey ; Union, NJ, USA ; USA
+ Pasadena, California ; Pasadena, CA, USA ; USA
+ M¸hlheim am Main, Germania ; M√ºhlheim am Main, Germany ; Germany
+ Gdynia, Polonia ; Gdynia, Poland ; Poland
+ Hoboken, New Jersey ; Hoboken, NJ, USA ; USA
+ Anversa, Belgio ; Antwerp, Belgium ; Belgium
+ Morangis, Francia ; Morangis, France ; France
+ Wilmington, Delaware ; Wilmington, DE, USA ; USA
+ Oatlands, Australia ; Oatlands NSW 2117, Australia ; Australia
+ Wildwood, Missouri ; Wildwood, MO, USA ; USA
+ Ypsilanti, Michigan ; Ypsilanti, MI, USA ; USA
+ Santa Monica, California ; Santa Monica, CA, USA ; USA
+ Thorndale, Canada ; Thorndale, ON N0M, Canada ; Canada
+ Indonesia ; Indonesia ; Indonesia
+ Norman, Oklahoma ; Norman, OK, USA ; USA
+ Baden, Canada ; Baden, ON, Canada ; Canada
+ California, Stati Uniti ; California, USA ; USA
+ Aberdeen, Regno Unito ; Aberdeen, UK ; UK
+ Columbus, Ohio ; Columbus, OH, USA ; USA
+ Bangor, Maine ; Bangor, ME 04401, USA ; USA
+ Basilea, Svizzera ; Basel, Switzerland ; Switzerland
+ Lys· nad Labem, Repubblica Ceca ; 289 22 Lys√° nad Labem, Czechia ; Czechia
+ Cambridge, Regno Unito ; Cambridge, UK ; UK
+ Brossard, Canada ; Brossard, QC, Canada ; Canada
+ Sonderborg, ; 6400 S√∏nderborg, Denmark ; Denmark
+ Lubecca, Germania ; L√ºbeck, Germany ; Germany
+ Karlsruhe, Germania ; Karlsruhe, Germany ; Germany
+ Maplewood, New Jersey ; Maplewood, NJ, USA ; USA
+ Guerville, Francia ; Guerville, France ; France
+ Salt Lake City, Utah ; Salt Lake City, UT, USA ; USA
+ Lubiana, Slovenia ; Ljubljana, Slovenia ; Slovenia
+ Boulder Creek, California ; Boulder Creek, CA 95006, USA ; USA
+ LogroÒo, Spagna ; Logro√±o, La Rioja, Spain ; Spain
+ Hook Norton, Regno Unito ; Hook Norton, Banbury OX15, UK ; UK
+ Ann Arbor, Michigan ; Ann Arbor, MI, USA ; USA
+ Lafayette, Louisiana ; Lafayette, LA, USA ; USA
+ Kathmandu, Nepal ; Kathmandu 44600, Nepal ; Nepal
+ Buffalo, New York ; Buffalo, NY, USA ; USA
+ Giappone ; Japan ; Japan
+ Key West, Florida ; Key West, FL 33040, USA ; USA
+ Metz, Francia ; Metz, France ; France
+ Gilbert, Arizona ; Gilbert, AZ, USA ; USA
+ Santiago, Cile ; Santiago, Santiago Metropolitan Region, Chile ; Chile
+ Oxford, Regno Unito ; Oxford, UK ; UK
+ Paesi Bassi ; Netherlands ; Netherlands
+ Baltimora, Maryland ; Baltimore, MD, USA ; USA
+ Grand Rapids, Michigan ; Grand Rapids, MI, USA ; USA
+ Bury Saint Edmunds, Regno Unito ; Bury St Edmunds, Bury Saint Edmunds, UK ; UK
+ Irvine, California ; Irvine, CA, USA ; USA
+ Lund, Svezia ; Lund, Sweden ; Sweden
+ Sacramento, California ; Sacramento, CA, USA ; USA
+ Kˆniz, Svizzera ; K√∂niz, Switzerland ; Switzerland
+ Guerneville, California ; Guerneville, CA 95446, USA ; USA
+ Arizona, Stati Uniti ; Arizona, USA ; USA
+ Woodstock, Georgia ; Woodstock, GA, USA ; USA
+ Royal Leamington Spa, Regno Unito ; Royal Leamington Spa, UK ; UK
+ Drag¯r, ; 2791 Drag√∏r, Denmark ; Denmark
+ D¸sseldorf, Germania ; D√ºsseldorf, Germany ; Germany
+ Belfast, Regno Unito ; Belfast, UK ; UK
+ UmeÂ, Svezia ; Ume√•, Sweden ; Sweden
+ Ibiza, Spagna ; Ibiza, Balearic Islands, Spain ; Spain
+ Newberg, Oregon ; Newberg, OR 97132, USA ; USA
+ Oberlin, Ohio ; Oberlin, OH 44074, USA ; USA
+ Londra, Canada ; London, ON, Canada ; Canada
+ Denver, Colorado ; Denver, CO, USA ; USA
+ Durham, North Carolina ; Durham, NC, USA ; USA
+ Shanghai, Cina ; Shanghai, China ; China
+ Middleton, Wisconsin ; Middleton, WI, USA ; USA
+ Procida, Italia ; Procida, 80079 Procida, Metropolitan City of Naples, Italy ; Italy
+ Aarhus, ; Aarhus, Denmark ; Denmark
+ Regno Unito ; United Kingdom ; United Kingdom
+ Long Beach, California ; Long Beach, CA, USA ; USA
+ La Grande, Oregon ; La Grande, OR 97850, USA ; USA
+ Batavia, New York ; Batavia, NY 14020, USA ; USA
+ Spagna ; Spain ; Spain
+ Dubai, Emirati Arabi Uniti ; Dubai - United Arab Emirates ; Dubai - United Arab Emirates
+ Tarpon Springs, Florida ; Tarpon Springs, FL, USA ; USA
+ Australia ; Australia ; Australia
+ Martinez, California ; Martinez, CA 94553, USA ; USA
+ Ontario, Canada ; Ontario, Canada ; Canada
+ East Brunswick, New Jersey ; East Brunswick, NJ, USA ; USA
+ Nashville, Tennessee ; Nashville, TN, USA ; USA
+ Dusseldorf, Germania ; D√ºsseldorf, Germany ; Germany
+ Northampton, Regno Unito ; Northampton, UK ; UK
+ Annecy, Francia ; Annecy, France ; France
+ Ridley Park, Pennsylvania ; Ridley Park, PA, USA ; USA
+ Bilbao, Spagna ; Bilbao, Biscay, Spain ; Spain
+ Œle-de-France, Francia ; √éle-de-France, France ; France
+ Gorham, New Hampshire ; Gorham, NH 03581, USA ; USA
+ Nuova Scozia, Canada ; Nova Scotia, Canada ; Canada
+ Muswellbrook, Australia ; Muswellbrook NSW 2333, Australia ; Australia
+ Raleigh, North Carolina ; Raleigh, NC, USA ; USA
+ Saint-Maurice, Francia ; 94410 Saint-Maurice, France ; France
+ Recife, Brasile ; Recife - State of Pernambuco, Brazil ; Brazil
+ Boulder, Colorado ; Boulder, CO, USA ; USA
+ Orlando, Florida ; Orlando, FL, USA ; USA
+ Slyudyanka, Russia ; Slyudyanka, Irkutsk Oblast, Russia ; Russia
+ Schelle, Belgio ; 2627 Schelle, Belgium ; Belgium
+ Ivry-sur-Seine, Francia ; Ivry-sur-Seine, France ; France
+ Rottweil, Germania ; Rottweil, Germany ; Germany
+ Albany, California ; Albany, CA, USA ; USA
+ Rio de Janeiro, Brasile ; Rio de Janeiro, State of Rio de Janeiro, Brazil ; Brazil
+ New Haven, Connecticut ; New Haven, CT, USA ; USA
+ Winnipeg, Canada ; Winnipeg, MB, Canada ; Canada
+ Ames, Iowa ; Ames, IA, USA ; USA
+ Ponte Cingoli, Italia ; 25050 Ponte Cingoli BS, Italy ; Italy
+ Elda, Spagna ; Elda, Alicante, Spain ; Spain
+ Reykjavik, Islanda ; Reykjav√≠k, Iceland ; Iceland
+ Helsinki, Finlandia ; Helsinki, Finland ; Finland
+ Port St Lucie, Florida ; Port St Lucie, FL, USA ; USA
+ Kitchener, Canada ; Kitchener, ON, Canada ; Canada
+ Halifax, Canada ; Halifax Regional Municipality, NS, Canada ; Canada
+ Albuquerque, New Mexico ; Albuquerque, NM, USA ; USA
+ New Territories, Hong-Kong ; New Territories, Hong Kong ; Hong Kong
+ Riverhead, New York ; Riverhead, NY 11901, USA ; USA
+ Cranberry Township, Pennsylvania ; Cranberry Twp, PA, USA ; USA
+ Nocera Superiore, Italia ; 84015 Nocera Superiore SA, Italy ; Italy
+ Sibu, Malesia ; Sibu, Sarawak, Malaysia ; Malaysia
+ Charleston, South Carolina ; Charleston, SC, USA ; USA
+ Marietta, Georgia ; Marietta, GA, USA ; USA
+ Colmar, Francia ; Colmar, France ; France
+ Huntington Beach, California ; Huntington Beach, CA, USA ; USA
+ Elanora Heights, Australia ; Elanora Heights NSW 2101, Australia ; Australia
+ Sudbury, Massachusetts ; Sudbury, MA, USA ; USA
+ Carouge, Svizzera ; 1227 Carouge, Switzerland ; Switzerland
+ Thunder Bay, Canada ; Thunder Bay, ON, Canada ; Canada
+ Lima, Per˘ ; Lima, Peru ; Peru
+ Beaufort, South Carolina ; Beaufort, SC, USA ; USA
+ Modesto, California ; Modesto, CA, USA ; USA
+ Territorio della Capitale Australiana, Australia ; Australian Capital Territory, Australia ; Australia
+ Owings Mills, Maryland ; Owings Mills, MD, USA ; USA
+ Buenos Aires, Argentina ; Buenos Aires, Argentina ; Argentina
+ Magonza, Germania ; Mainz, Germany ; Germany
+ Windsor, Canada ; Windsor, ON, Canada ; Canada
+ Roann, Indiana ; Roann, IN 46974, USA ; USA
+ Syracuse, New York ; Syracuse, NY, USA ; USA
+ Appleton, Wisconsin ; Appleton, WI, USA ; USA
+ Garoua, Camerun ; Garoua, Cameroon ; Cameroon
+ Stoccolma, Svezia ; Stockholm, Sweden ; Sweden
+ Medellin, Colombia ; Medellin, Antioquia, Colombia ; Colombia
+ Malta ; Malta ; Malta
+ Mountain View, California ; Mountain View, CA, USA ; USA
+ Chester, Regno Unito ; Chester, UK ; UK
+ Germania ; Germany ; Germany
+ Praga, Repubblica Ceca ; Prague, Czechia ; Czechia
+ Aptos, California ; Aptos, CA 95003, USA ; USA
+ Gig Harbor, Washington ; Gig Harbor, WA, USA ; USA
+ Genova, Italia ; Genoa, Italy ; Italy
+ Pittsford, Vermont ; Pittsford, VT, USA ; USA
+ Mar del Plata, Argentina ; Mar del Plata, Buenos Aires Province, Argentina ; Argentina
+ Centreville, Virginia ; Centreville, VA, USA ; USA
+ Modena, Italia ; Modena, Province of Modena, Italy ; Italy
+ Budapest, Ungheria ; Budapest, Hungary ; Hungary
+ North Hero, Vermont ; North Hero, VT 05474, USA ; USA
+ Richmond Hill, Georgia ; Richmond Hill, GA 31324, USA ; USA
+ Grapevine, Texas ; Grapevine, TX, USA ; USA
+ Fairfax, Virginia ; Fairfax, VA, USA ; USA
+ Santiago de Compostela, Spagna ; Santiago de Compostela, A Coru√±a, Spain ; Spain
+ Talent, Oregon ; Talent, OR 97540, USA ; USA
+ Glendale, California ; Glendale, CA, USA ; USA
+ Granger, Indiana ; Granger, IN, USA ; USA
+ Richmond, Virginia ; Richmond, VA, USA ; USA
+ Merano, Italia ; Merano, Province of Bolzano - South Tyrol, Italy ; Italy
+ Thalwil, Svizzera ; Thalwil, Switzerland ; Switzerland
+ Essen, Germania ; Essen, Germany ; Germany
+ Wynnewood, Pennsylvania ; Wynnewood, PA, USA ; USA
+ Santa Fe, New Mexico ; Santa Fe, NM, USA ; USA
+ Riverside, California ; Riverside, CA, USA ; USA
+ Cordoba, Spagna ; C√≥rdoba, Spain ; Spain
+ Burnham-on-Crouch, Regno Unito ; Burnham-on-Crouch, UK ; UK
+ Odessa, Ucraina ; Odessa, Odessa Oblast, Ukraine ; Ukraine
+ Amfreville-la-Mi-Voie, Francia ; Amfreville-la-Mi-Voie, France ; France
+ Reggio Emilia, Italia ; Reggio Emilia, Province of Reggio Emilia, Italy ; Italy
+ Ratingen, Germania ; Ratingen, Germany ; Germany
+ Lipsia, Germania ; Leipzig, Germany ; Germany
+ Austin, Texas ; Austin, TX, USA ; USA
+ Markham, Canada ; Markham, ON, Canada ; Canada
+ Saragossa, Spagna ; Zaragoza, Spain ; Spain
+ Yeruham, Israele ; Yeruham, Israel ; Israel
+ Bad Hersfeld, Germania ; 36251 Bad Hersfeld, Germany ; Germany
+ Birds Landing, California ; Birds Landing, CA, USA ; USA
+ Charlottesville, Virginia ; Charlottesville, VA, USA ; USA
+ Montefiascone, Italia ; 01027 Montefiascone, VT, Italy ; Italy
+ Pismo Beach, California ; Pismo Beach, CA, USA ; USA
+ Carlisle, Massachusetts ; Carlisle, MA 01741, USA ; USA
+ Eugene, Oregon ; Eugene, OR, USA ; USA
+ Redwood City, California ; Redwood City, CA, USA ; USA
+ Nyons, Francia ; 26110 Nyons, France ; France
+ Miahuatlan, Messico ; Miahuatl√°n de Porfirio D√≠az, Oaxaca, Mexico ; Mexico
+ Texas, Stati Uniti ; Texas, USA ; USA
+ Valinhos, Brasile ; Valinhos - State of S√£o Paulo, Brazil ; Brazil
+ Newtown, Australia ; Newtown NSW 2042, Australia ; Australia
+ FlorianÛpolis, Brasile ; Florian√≥polis - State of Santa Catarina, Brazil ; Brazil
+ San Carlos, California ; San Carlos, CA, USA ; USA
+ Wilhelmsfeld, Germania ; 69259 Wilhelmsfeld, Germany ; Germany
+ Friburgo, Germania ; Freiburg, Germany ; Germany
+ Ayr, Regno Unito ; Ayr, UK ; UK
+ Emeryville, California ; Emeryville, CA, USA ; USA
+ Stoccarda, Germania ; Stuttgart, Germany ; Germany
+ Saint-Brieuc, Francia ; 22000 Saint-Brieuc, France ; France
+ Sebastopol, California ; Sebastopol, CA 95472, USA ; USA
+ Tampere, Finlandia ; Tampere, Finland ; Finland
+ Panama, Panama ; Panama City, Panama ; Panama
+ L'Herbergement, Francia ; 85260 L'Herbergement, France ; France
+ Villaco, Austria ; Villach, Austria ; Austria
+ Torquay, Australia ; Torquay VIC 3228, Australia ; Australia
+ Ahmedabad, India ; Ahmedabad, Gujarat, India ; India
+ Asturias, Spagna ; Asturias, Spain ; Spain
+ Civitanova Marche, Italia ; 62012 Civitanova Marche, Province of Macerata, Italy ; Italy
+ Boca Raton, Florida ; Boca Raton, FL, USA ; USA
+ Oldenburg, Germania ; Oldenburg, Germany ; Germany
+ Worthing, Regno Unito ; Worthing, UK ; UK
+ Michigan, Stati Uniti ; Michigan, USA ; USA
+ Saint Helier, Jersey ; St Helier, Jersey ; Jersey
+ Canada ; Canada ; Canada
+ Sint-Gillis-Waas, Belgio ; 9170 Sint-Gillis-Waas, Belgium ; Belgium
+ San Gallo, Svizzera ; St Gallen, Switzerland ; Switzerland
+ Irlanda ; Ireland ; Ireland
+ Kamuela, Hawaii ; Waimea, HI 96743, USA ; USA
+ Tallinn, Estonia ; Tallinn, Estonia ; Estonia
+ Saumur, Francia ; 49400 Saumur, France ; France
+ Beaconsfield, Canada ; Beaconsfield, QC, Canada ; Canada
+ Cameron Park, California ; Cameron Park, CA, USA ; USA
+ Saint John's, Canada ; St. John's, NL, Canada ; Canada
+ South Lake Tahoe, California ; South Lake Tahoe, CA 96150, USA ; USA
+ Tunkhannock, Pennsylvania ; Tunkhannock, PA 18657, USA ; USA
+ ItajaÌ, Brasile ; Itaja√≠ - State of Santa Catarina, Brazil ; Brazil
+ Rockingham, Australia ; Rockingham WA 6168, Australia ; Australia
+ Southampton, Regno Unito ; Southampton, UK ; UK
+ Angers, Francia ; Angers, France ; France
+ Livermore, California ; Livermore, CA, USA ; USA
+ Tel Aviv-Yafo, Israele ; Tel Aviv-Yafo, Israel ; Israel
+ Hakalau, Hawaii ; Hakalau, HI 96728, USA ; USA
+ Perth, Australia ; Perth WA, Australia ; Australia
+ Tulsa, Oklahoma ; Tulsa, OK, USA ; USA
+ Canberra, Australia ; Canberra ACT 2601, Australia ; Australia
+ Keene, New Hampshire ; Keene, NH, USA ; USA
+ Avranches, Francia ; 50300 Avranches, France ; France
+ Schiedam, Paesi Bassi ; Schiedam, Netherlands ; Netherlands
+ Pescara, Italia ; Pescara, Province of Pescara, Italy ; Italy
+ Scottsdale, Arizona ; Scottsdale, AZ, USA ; USA
+ Providence, Rhode Island ; Providence, RI, USA ; USA
+ Nimega, Paesi Bassi ; Nijmegen, Netherlands ; Netherlands
+ Ansbach, Germania ; 91522 Ansbach, Germany ; Germany
+ Robina, Australia ; Robina QLD 4226, Australia ; Australia
+ Scranton, Pennsylvania ; Scranton, PA, USA ; USA
+ La Quinta, California ; La Quinta, CA, USA ; USA
+ Batavia, Illinois ; Batavia, IL, USA ; USA
+ Siviglia, Spagna ; Seville, Sevilla, Spain ; Spain
+ Burgos, Spagna ; Burgos, Spain ; Spain
+ Rende, Italia ; 87036 Rende, Province of Cosenza, Italy ; Italy
+ Menlo Park, California ; Menlo Park, CA, USA ; USA
+ Princeton, New Jersey ; Princeton, NJ, USA ; USA
+ Mikhmoret, Israele ; Mikhmoret, Israel ; Israel
+ ?. ??????, Russia ; Russia ; Russia
+ Burbank, California ; Burbank, CA, USA ; USA
+ Atene, Grecia ; Athens, Greece ; Greece
+ Languedoc-Roussillon-Midi-PyrÈnÈes, Francia ; Occitanie, France ; France
+ Vilnius, Lituania ; Vilnius, Lithuania ; Lithuania
+ Riga, Lettonia ; Riga, Latvia ; Latvia
+ Namur, Belgio ; Namur, Belgium ; Belgium
+ Annemasse, Francia ; 74100 Annemasse, France ; France
+ Belvedere Tiburon, California ; Belvedere, CA, USA ; USA
+ Shoreline, Washington ; Shoreline, WA, USA ; USA
+ Rennes, Francia ; Rennes, France ; France
+ Chiavari, Italia ; 16043 Chiavari, Metropolitan City of Genoa, Italy ; Italy
+ Cedar City, Utah ; Cedar City, UT, USA ; USA
+ Kissimmee, Florida ; Kissimmee, FL, USA ; USA
+ Ginevra, Svizzera ; Geneva, Switzerland ; Switzerland
+ Beaune, Francia ; 21200 Beaune, France ; France
+ Bristol, Rhode Island ; Bristol, RI 02809, USA ; USA
+ State College, Pennsylvania ; State College, PA, USA ; USA
+ Virginia, Stati Uniti ; Virginia, USA ; USA
+ Valenza, Francia ; 26000 Valence, France ; France
+ Gloucester, Massachusetts ; Gloucester, MA, USA ; USA
+ San Clemente, California ; San Clemente, CA, USA ; USA
+ Sagy, Francia ; 95450 Sagy, France ; France
+ Parker, Colorado ; Parker, CO, USA ; USA
+ ?Ûd?, Polonia ; ≈\u0081√≥d≈∫, Poland ; Poland
+ Williamsburg, Virginia ; Williamsburg, VA, USA ; USA
+ Los Altos, California ; Los Altos, CA, USA ; USA
+ Russia ; Russia ; Russia
+ Cluj-Napoca, Romania ; Cluj-Napoca, Romania ; Romania
+ Amiens, Francia ; Amiens, France ; France
+ Dornbirn, Austria ; 6850 Dornbirn, Austria ; Austria
+ Pancevo, Serbia ; Pancevo, Serbia ; Serbia
+ Fitzroy, Australia ; Fitzroy VIC 3065, Australia ; Australia
+ Lewisham, Regno Unito ; Lewisham, London SE13, UK ; UK
+ Chico, California ; Chico, CA, USA ; USA
+ Warendorf, Germania ; 48231 Warendorf, Germany ; Germany
+ Ixelles, Belgio ; Ixelles, Belgium ; Belgium
+ Weimar, Germania ; Weimar, Germany ; Germany
+ Decatur, Georgia ; Decatur, GA 30030, USA ; USA
+ BesanÁon, Francia ; 25000 Besan√ßon, France ; France
+ Berna, Svizzera ; Bern, Switzerland ; Switzerland
+ Flers-sur-Noye, Francia ; Flers-sur-Noye, France ; France
+ Soorts-Hossegor, Francia ; 40150 Hossegor, France ; France
+ Arlington, Virginia ; Arlington, VA, USA ; USA
+ Gatineau, Canada ; Gatineau, QC, Canada ; Canada
+ Lakewood, California ; Lakewood, CA, USA ; USA
+ Golden, Colorado ; Golden, CO, USA ; USA
+ Leer, Germania ; 26789 Leer, Germany ; Germany
+ Tuross Head, Australia ; Tuross Head NSW 2537, Australia ; Australia
+ Colombes, Francia ; Colombes, France ; France
+ Cesena, Italia ; Cesena, Province of Forl√¨-Cesena, Italy ; Italy
+ Golden Lake, Canada ; Golden Lake, ON K0J, Canada ; Canada
+ Breda, Paesi Bassi ; Breda, Netherlands ; Netherlands
+ Norwalk, Connecticut ; Norwalk, CT, USA ; USA
+ Worms, Germania ; Worms, Germany ; Germany
+ Las Vegas, Nevada ; Las Vegas, NV, USA ; USA
+ Kendallville, Indiana ; Kendallville, IN 46755, USA ; USA
+ Macao ; Macau ; Macau
+ Stourbridge, Regno Unito ; Stourbridge, UK ; UK
+ Tauranga, Nuova Zelanda ; Tauranga, New Zealand ; New Zealand
+ Abbiategrasso, Italia ; 20081 Abbiategrasso, Metropolitan City of Milan, Italy ; Italy
+ Beauvilliers, Francia ; 28150 Beauvilliers, France ; France
+ Bardon, Australia ; Bardon QLD 4065, Australia ; Australia
+ Burlington, Vermont ; Burlington, VT, USA ; USA
+ Alameda, California ; Alameda, CA, USA ; USA
+ Caracas, Venezuela ; Caracas, Capital District, Venezuela ; Venezuela
+ Jena, Germania ; Jena, Germany ; Germany
+ Naga City, Filippine ; Naga, Camarines Sur, Philippines ; Philippines
+ Manila, Filippine ; Manila, Metro Manila, Philippines ; Philippines
+ Seregno, Italia ; 20831 Seregno, Province of Monza and Brianza, Italy ; Italy
+ Curitiba, Brasile ; Curitiba, State of Paran√°, Brazil ; Brazil
+ Ercolano, Italia ; 80056 Ercolano, Metropolitan City of Naples, Italy ; Italy
+ Norimberga, Germania ; Nuremberg, Germany ; Germany
+ Altrincham, Regno Unito ; Altrincham, UK ; UK
+ Peterborough, Canada ; Peterborough, ON, Canada ; Canada
+ Mytchett, Regno Unito ; Mytchett, UK ; UK
+ Sankt Leon-Rot, Germania ; 68789 Sankt Leon-Rot, Germany ; Germany
+ Oreland, Pennsylvania ; Oreland, PA, USA ; USA
+ Newport, Regno Unito ; Newport, UK ; UK
+ Aylesbury, Regno Unito ; Aylesbury, UK ; UK
+ Vermont, Stati Uniti ; Vermont, USA ; USA
+ Libano, New Hampshire ; Lebanon, NH, USA ; USA
+ Plovdiv, Bulgaria ; Plovdiv, Bulgaria ; Bulgaria
+ Augusta, Germania ; Augsburg, Germany ; Germany
+ Hickory, North Carolina ; Hickory, NC, USA ; USA
+ Bristol, Regno Unito ; Bristol, UK ; UK
+ Delaware, Stati Uniti ; Delaware, USA ; USA
+ Valladolid, Spagna ; Valladolid, Spain ; Spain
+ India ; India ; India
+ Botany, Australia ; Botany NSW 2019, Australia ; Australia
+ Laguna Niguel, California ; Laguna Niguel, CA, USA ; USA
+ Old Westbury, New York ; Old Westbury, NY, USA ; USA
+ Altadena, California ; Altadena, CA, USA ; USA
+ Woluwe-Saint-Lambert, Belgio ; 1200 Woluwe-Saint-Lambert, Belgium ; Belgium
+ Monterey, Indiana ; Monterey, IN, USA ; USA
+ Iowa City, Iowa ; Iowa City, IA, USA ; USA
+ La Conner, Washington ; La Conner, WA 98257, USA ; USA
+ Allschwil, Svizzera ; 4123 Allschwil, Switzerland ; Switzerland
+ Bentleigh East, Australia ; Bentleigh East VIC 3165, Australia ; Australia
+ Bucharest, Romania ; Bucharest, Romania ; Romania
+ Salisburgo, Austria ; Salzburg, Austria ; Austria
+ Okaihau, Nuova Zelanda ; Okaihau, New Zealand ; New Zealand
+ Corrales, New Mexico ; Corrales, NM, USA ; USA
+ Silvan, Australia ; Silvan VIC 3795, Australia ; Australia
+ Victoria, Canada ; Victoria, BC, Canada ; Canada
+ S„o Carlos, Brasile ; S√£o Carlos, SP, Brazil ; Brazil
+ Encinitas, California ; Encinitas, CA, USA ; USA
+ Sechelt, Canada ; Sechelt, BC, Canada ; Canada
+ Gˆteborg, Svezia ; Gothenburg, Sweden ; Sweden
+ Austria ; Austria ; Austria
+ Nevada, Stati Uniti ; Nevada, USA ; USA
+ Nuovo Galles del Sud, Australia ; New South Wales, Australia ; Australia
+ Jersey City, New Jersey ; Jersey City, NJ, USA ; USA
+ Bakersfield, California ; Bakersfield, CA, USA ; USA
+ Gerusalemme, Israele ; Jerusalem, Israel ; Israel
+ Midvale, Utah ; Midvale, UT, USA ; USA
+ Rock Hill, South Carolina ; Rock Hill, SC, USA ; USA
+ Southport, Regno Unito ; Southport, UK ; UK
+ Champigny-sur-Marne, Francia ; Champigny-sur-Marne, France ; France
+ Il Cairo, Egitto ; Cairo, Cairo Governorate, Egypt ; Egypt
+ Cologno Monzese, Italia ; 20093 Cologno Monzese, Metropolitan City of Milan, Italy ; Italy
+ Durango, Colorado ; Durango, CO, USA ; USA
+ Burgwedel, Germania ; 30938 Burgwedel, Germany ; Germany
+ Roseville, California ; Roseville, CA, USA ; USA
+ Saragozza, Spagna ; Zaragoza, Spain ; Spain
+ Santo AndrÈ, Brasile ; Santo Andr√©, State of S√£o Paulo, Brazil ; Brazil
+ Nuova Delhi, India ; New Delhi, Delhi, India ; India
+ McMinnville, Oregon ; McMinnville, OR 97128, USA ; USA
+ Ville-d'Avray, Francia ; 92410 Ville-d'Avray, France ; France
+ Blue Bell, Pennsylvania ; Blue Bell, PA, USA ; USA
+ Casablanca, Marocco ; Casablanca, Morocco ; Morocco
+ Lucca, Italia ; 55100 Lucca, Province of Lucca, Italy ; Italy
+ Malesia ; Malaysia ; Malaysia
+ Gif-sur-Yvette, Francia ; Gif-sur-Yvette, France ; France
+ Indianapolis, Indiana ; Indianapolis, IN, USA ; USA
+ äiauliai, Lituania ; ≈†iauliai, Lithuania ; Lithuania
+ Zugo, Svizzera ; Canton of Zug, Switzerland ; Switzerland
+ Elwood, Australia ; Elwood VIC 3184, Australia ; Australia
+ Brema, Germania ; Bremen, Germany ; Germany
+ Monza, Italia ; 20900 Monza, Province of Monza and Brianza, Italy ; Italy
+ Castle Rock, Colorado ; Castle Rock, CO, USA ; USA
+ Canton, Cina ; Guangzhou, Guangdong, China ; China
+ Belgio ; Belgium ; Belgium
+ Fresno, California ; Fresno, CA, USA ; USA
+ Seynod, Francia ; Seynod, France ; France
+ Sonnaz, Francia ; Sonnaz, France ; France
+ Celle, Germania ; Celle, Germany ; Germany
+ Battaglia Terme, Italia ; Battaglia Terme, Province of Padua, Italy ; Italy
+ Royal Oak, Michigan ; Royal Oak, MI, USA ; USA
+ Guelph, Canada ; Guelph, ON, Canada ; Canada
+ Thaxted, Regno Unito ; Thaxted, Dunmow CM6, UK ; UK
+ Venezia, Italia ; Venice, Italy ; Italy
+ Interlaken, Svizzera ; Interlaken, Switzerland ; Switzerland
+ Cowes, Regno Unito ; Cowes PO31, UK ; UK
+ Los Gatos, California ; Los Gatos, CA, USA ; USA
+ Cordoba, Argentina ; C√≥rdoba, Cordoba, Argentina ; Argentina
+ Aquisgrana, Germania ; Aachen, Germany ; Germany
+ Tours, Francia ; Tours, France ; France
+ Redmond, Washington ; Redmond, WA, USA ; USA
+ Mendoza, Argentina ; Mendoza, Capital Department, Mendoza Province, Argentina ; Argentina
+ Cuenca, Ecuador ; Cuenca, Ecuador ; Ecuador
+ Stoke-on-Trent, Regno Unito ; Stoke-on-Trent, UK ; UK
+ North Kingstown, Rhode Island ; North Kingstown, RI, USA ; USA
+ Illinois, Stati Uniti ; Illinois, USA ; USA
+ Cracovia, Polonia ; Krak√≥w, Poland ; Poland
+ San Pedro Garza GarcÌa, Messico ; San Pedro Garza Garc√≠a, Nuevo Leon, Mexico ; Mexico
+ Conthey, Svizzera ; Conthey, Switzerland ; Switzerland
+ Varennes, Canada ; Varennes, QC, Canada ; Canada
+ Pennsylvania, Stati Uniti ; Pennsylvania, USA ; USA
+ Cognac, Francia ; 16100 Cognac, France ; France
+ Hillsboro Beach, Florida ; Hillsboro Beach, FL, USA ; USA
+ Milwaukee, Wisconsin ; Milwaukee, WI, USA ; USA
+ Washington D.C., District of Columbia ; Washington, DC, USA ; USA
+ Distretto di West Bloomfield, Michigan ; 4212 Highland Rd #102, Waterford Twp, MI 48328, USA ; USA
+ North Vancouver, Canada ; North Vancouver, BC, Canada ; Canada
+ Tacoma, Washington ; Tacoma, WA, USA ; USA
+ Saint-AvÈ, Francia ; 56890 Saint-Av√©, France ; France
+ Nimes, Francia ; Nimes, France ; France
+ Visalia, California ; Visalia, CA, USA ; USA
+ Columbia, Missouri ; Columbia, MO, USA ; USA
+ Berlino, New Hampshire ; Berlin, NH, USA ; USA
+ Silver Spring, Maryland ; Silver Spring, MD, USA ; USA
+ Bandol, Francia ; Bandol, France ; France
+ Corvallis, Oregon ; Corvallis, OR, USA ; USA
+ St. Louis, Missouri ; St. Louis, MO, USA ; USA
+ Ladera Ranch, California ; Ladera Ranch, CA, USA ; USA
+ Shoreham-by-Sea, Regno Unito ; Shoreham-by-Sea, UK ; UK
+ Wil, Svizzera ; 9500 Wil, Switzerland ; Switzerland
+ Redondo Beach, California ; Redondo Beach, CA, USA ; USA
+ Cadoneghe, Italia ; 35010 Cadoneghe PD, Italy ; Italy
+ Messico ; Mexico ; Mexico
+ Houilles, Francia ; Houilles, France ; France
+ Lotte, Germania ; Lotte, Germany ; Germany
+ Pechino, Cina ; Beijing, China ; China
+ Saratoga, California ; Saratoga, CA, USA ; USA
+ Vigo, Spagna ; Vigo, Pontevedra, Spain ; Spain
+ San Leandro, California ; San Leandro, CA, USA ; USA
+ Tucson, Arizona ; Tucson, AZ, USA ; USA
+ Warner, New Hampshire ; Warner, NH, USA ; USA
+ Bergamo, Italia ; Bergamo, Province of Bergamo, Italy ; Italy
+ Glebe, Australia ; Glebe NSW 2037, Australia ; Australia
+ Wilmington, Ohio ; Wilmington, OH 45177, USA ; USA
+ Leida, Paesi Bassi ; Leiden, Netherlands ; Netherlands
+ Yonkers, New York ; Yonkers, NY, USA ; USA
+ Bremerton, Washington ; Bremerton, WA, USA ; USA
+ Kowloon, Hong-Kong ; Kowloon, Hong Kong ; Hong Kong
+ Rockville, Maryland ; Rockville, MD, USA ; USA
+ Citt‡ del Capo, Sudafrica ; Cape Town, South Africa ; South Africa
+ Milton, Florida ; Milton, FL, USA ; USA
+ Mississauga, Canada ; Mississauga, ON, Canada ; Canada
+ Hoogvliet, Paesi Bassi ; Hoogvliet Rotterdam, Netherlands ; Netherlands
+ Brugg, Svizzera ; 5200 Brugg, Switzerland ; Switzerland
+ Tampa, Florida ; Tampa, FL, USA ; USA
+ Heredia, Costa Rica ; Heredia Province, Heredia, Costa Rica ; Costa Rica
+ Sofia, Bulgaria ; Sofia, Bulgaria ; Bulgaria
+ Hoensbroek, Paesi Bassi ; Hoensbroek, Netherlands ; Netherlands
+ Caen, Francia ; 14000 Caen, France ; France
+ Bonn, Germania ; Bonn, Germany ; Germany
+ Trento, Italia ; Trento, Italy ; Italy
+ Montigny-le-Bretonneux, Francia ; Montigny-le-Bretonneux, France ; France
+ Dunedin, Nuova Zelanda ; Dunedin, New Zealand ; New Zealand
+ Saint-Josse-ten-Noode, Belgio ; Saint-Josse-ten-Noode, Belgium ; Belgium
+ Alhambra, California ; Alhambra, CA, USA ; USA
+ Milton, Massachusetts ; Milton, MA, USA ; USA
+ Szigetszentm·rton, Ungheria ; Szigetszentm√°rton, Hungary ; Hungary
+ Albury, Australia ; Albury NSW 2640, Australia ; Australia
+ West Simsbury, Connecticut ; West Simsbury, Simsbury, CT, USA ; USA
+ SËvres, Francia ; S√®vres, France ; France
+ Gentilly, Francia ; 94250 Gentilly, France ; France
+ Zhitomir, Ucraina ; Zhytomyr, Zhytomyrs'ka oblast, Ukraine ; Ukraine
+ Aarhus County, ; Aarhus Municipality, Denmark ; Denmark
+ La Plata, Argentina ; La Plata, Buenos Aires Province, Argentina ; Argentina
+ Binyamina-Giv'at Ada, Israele ; Binyamina-Giv'at Ada, Israel ; Israel
+ Chambly, Canada ; Chambly, QC, Canada ; Canada
+ Leixlip, Irlanda ; Leixlip, Co. Kildare, Ireland ; Ireland
+ Dhahran, Arabia Saudita ; Dhahran Saudi Arabia ; Dhahran Saudi Arabia
+ Australia Occidentale, Australia ; Western Australia, Australia ; Australia
+ Pleasanton, California ; Pleasanton, CA, USA ; USA
+ Gainesville, Florida ; Gainesville, FL, USA ; USA
+ San Anselmo, California ; San Anselmo, CA 94960, USA ; USA
+ Americana, Brasile ; Americana - State of S√£o Paulo, Brazil ; Brazil
+ Petaling Jaya, Malesia ; Petaling Jaya, Selangor, Malaysia ; Malaysia
+ Bielefeld, Germania ; Bielefeld, Germany ; Germany
+ Norderstedt, Germania ; Norderstedt, Germany ; Germany
+ Myrtle Beach, South Carolina ; Myrtle Beach, SC, USA ; USA
+ Reston, Virginia ; Reston, VA, USA ; USA
+ San Bruno, California ; San Bruno, CA, USA ; USA
+ Winchester, Regno Unito ; Winchester, UK ; UK
+ Glenside, Pennsylvania ; Glenside, PA, USA ; USA
+ Boucherville, Canada ; Boucherville, QC, Canada ; Canada
+ Kinsale, Irlanda ; Kinsale, Co. Cork, Ireland ; Ireland
+ Imperial, California ; Imperial, CA, USA ; USA
+ Somerset, New Jersey ; Somerset, Franklin Township, NJ 08873, USA ; USA
+ Gilroy, California ; Gilroy, CA 95020, USA ; USA
+ Port Huron, Michigan ; Port Huron, MI, USA ; USA
+ Conway, South Carolina ; Conway, SC, USA ; USA
+ South Pasadena, California ; South Pasadena, CA 91030, USA ; USA
+ Italia ; Italy ; Italy
+ Campos, Brasile ; Campos dos Goytacazes - State of Rio de Janeiro, Brazil ; Brazil
+ Traverse City, Michigan ; Traverse City, MI, USA ; USA
+ Purmerend, Paesi Bassi ; Purmerend, Netherlands ; Netherlands
+ Golden Valley, Minnesota ; Golden Valley, MN, USA ; USA
+ Waterloo, Canada ; Waterloo, ON, Canada ; Canada
+ Falerna, Italia ; 88042 Falerna, Province of Catanzaro, Italy ; Italy
+ Lafayette, Indiana ; Lafayette, IN, USA ; USA
+ Grove City, Ohio ; Grove City, OH, USA ; USA
+ Jacksonville, Florida ; Jacksonville, FL, USA ; USA
+ Nogent-sur-Marne, Francia ; Nogent-sur-Marne, France ; France
+ Alberta, Canada ; Alberta, Canada ; Canada
+ Bregenz, Austria ; Bregenz, Austria ; Austria
+ Bensville, Australia ; Bensville NSW 2251, Australia ; Australia
+ La Rochelle, Francia ; La Rochelle, France ; France
+ Indian Trail, North Carolina ; Indian Trail, NC, USA ; USA
+ Sugar Land, Texas ; Sugar Land, TX, USA ; USA
+ Aurora, Illinois ; Aurora, IL, USA ; USA
+ York, Regno Unito ; York, UK ; UK
+ Salteras, Spagna ; 41909 Salteras, Sevilla, Spain ; Spain
+ Koszalin, Polonia ; Koszalin, Poland ; Poland
+ Alicante, Spagna ; Alicante, Spain ; Spain
+ Exeter, Regno Unito ; Exeter, UK ; UK
+ Seul, Corea del Sud ; Seoul, South Korea ; South Korea
+ Oneonta, New York ; Oneonta, NY 13820, USA ; USA
+ Giacarta, Indonesia ; Jakarta, Indonesia ; Indonesia
+ Pontedera, Italia ; 56025 Pontedera, Province of Pisa, Italy ; Italy
+ Pulau Pinang, Malesia ; Penang, Malaysia ; Malaysia
+ St Thomas, Canada ; St. Thomas, ON, Canada ; Canada
+ Novi Sad, Serbia ; Novi Sad, Serbia ; Serbia
+ Ouderkerk aan de Amstel, Paesi Bassi ; 1191 Ouderkerk aan de Amstel, Netherlands ; Netherlands
+ Orono, Maine ; Orono, ME, USA ; USA
+ Canegrate, Italia ; 20010 Canegrate MI, Italy ; Italy
+ Antananarivo, Madagascar ; Antananarivo, Madagascar ; Madagascar
+ Placencia, Belize ; Placencia, Belize ; Belize
+ Kruibeke, Belgio ; Kruibeke, Belgium ; Belgium
+ West Leederville, Australia ; West Leederville WA 6007, Australia ; Australia
+ Fort-de-France, Martinica ; Fort-de-France Bay, Martinique ; Martinique
+ Catalunya, Spagna ; Catalonia, Spain ; Spain
+ Hollenfels, Lussemburgo ; Hollenfels, Luxembourg ; Luxembourg
+ Tijuana, Messico ; Tijuana, Baja California, Mexico ; Mexico
+ Castaic, California ; Castaic, CA 91384, USA ; USA
+ Knoxville, Tennessee ; Knoxville, TN, USA ; USA
+ Little Rock, Arkansas ; Little Rock, AR, USA ; USA
+ 's-Hertogenbosch, Paesi Bassi ; 's Hertogenbosch, Netherlands ; Netherlands
+ Dresda, Germania ; Dresden, Germany ; Germany
+ New Aquitaine, Francia ; Nouvelle-Aquitaine, France ; France
+ Vesoul, Francia ; 70000 Vesoul, France ; France
+ Quebec, Canada ; Qu√©bec City, QC, Canada ; Canada
+ Norfolk, Virginia ; Norfolk, VA, USA ; USA
+ Svizzera ; Switzerland ; Switzerland
+ Porto, Portogallo ; Porto, Portugal ; Portugal
+ Soliera, Italia ; 41019 Soliera, Province of Modena, Italy ; Italy
+ Nottingham, Regno Unito ; Nottingham, UK ; UK
+ Panama City Beach, Florida ; Panama City Beach, FL, USA ; USA
+ Nelson, Canada ; Nelson, BC, Canada ; Canada

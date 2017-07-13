@@ -192,10 +192,8 @@ ggplot(metrics_by_contry, aes(x=GDP_per_capita_in_dollars, y=m_house, label=Code
 ggplot(metrics_by_contry, aes(x=individualism, y=m_neg, label=Code3)) + geom_smooth(method = "lm") +geom_label()
 ggplot(metrics_by_contry, aes(x=individualism, y=m_location, label=Code3)) + geom_smooth(method = "lm") +geom_label()
 
-
-review_iso[Code3=='USA']$comments[1:100]
-review_iso[Code3=='IDN']$comments[1:100]
-
+ggplot(review_iso_english[Code3=='USA'], aes(x=m_house)) + geom_histogram() + xlim(0,0.5)
+ggplot(review_iso_english[Code3=='IND'], aes(x=m_house)) + geom_histogram() + xlim(0,0.5)
 
 
 # method 2
@@ -211,3 +209,5 @@ review_iso_english_m$overall_pace_means =  as.numeric(review_iso_english_m$overa
 corr.test(review_iso_english_m[, varx, with=F], review_iso_english_m[, vary, with=F], method="pearson", adjust="fdr")
 # no corr at all!
 
+ggplot(review_iso_english_m, aes(m_pos, m_neg)) + geom_smooth(method = "lm") + geom_point(size=.1, alpha=.1)
+       
